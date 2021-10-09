@@ -19,7 +19,3 @@ const App = () => (
 );
 
 export default App;
-
-// 58:45
-// 3:02:18
-// 3:49.40
