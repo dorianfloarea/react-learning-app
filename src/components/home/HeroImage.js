@@ -1,21 +1,27 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Content, Text, Wrapper} from './HeroImage.styles';
 import PropTypes from 'prop-types';
 
-const HeroImage = ({
-                       image,
-                       title,
-                       text
-                   }) => (
-    <Wrapper image={image}>
-        <Content>
-            <Text>
-                <h1>{title}</h1>
-                <p>{text}</p>
-            </Text>
-        </Content>
-    </Wrapper>
-);
+class HeroImage extends Component {
+    render() {
+        const {
+                  image,
+                  title,
+                  text
+              } = this.props;
+
+        return (
+            <Wrapper image={image}>
+                <Content>
+                    <Text>
+                        <h1>{title}</h1>
+                        <p>{text}</p>
+                    </Text>
+                </Content>
+            </Wrapper>
+        );
+    }
+}
 
 HeroImage.propTypes = {
     image: PropTypes.string,
