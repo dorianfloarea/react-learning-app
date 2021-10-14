@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Content, Wrapper} from './BreadCrumb.styles';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 class BreadCrumb extends Component {
@@ -10,14 +10,16 @@ class BreadCrumb extends Component {
         return (
             <Wrapper>
                 <Content>
-                    <Link to="/">
-                        <span>Home</span>
+                    <Link href="/">
+                        <a>
+                            <span>Home</span>
+                        </a>
                     </Link>
                     <span>|</span>
                     <span>{movieTitle}</span>
                 </Content>
             </Wrapper>
-        )
+        );
     }
 }
 

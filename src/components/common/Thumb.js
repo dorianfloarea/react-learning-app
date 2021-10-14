@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Image} from './Thumb.styles';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 class Thumb extends Component {
@@ -10,11 +10,14 @@ class Thumb extends Component {
                   movieId,
                   clickable
               } = this.props;
+
         return (
             <div>
                 {clickable ? (
-                    <Link to={`/movie/${movieId}`}>
-                        <Image src={image} alt="movie-thumb"/>
+                    <Link href={`/movie/${movieId}`}>
+                        <a>
+                            <Image src={image} alt="movie-thumb"/>
+                        </a>
                     </Link>
                 ) : (
                     <Image src={image} alt="movie-thumb"/>

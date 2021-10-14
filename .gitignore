@@ -26,3 +26,6 @@ yarn-error.log*
 .idea
 .netlify
 .DS_Store
+.next
+.data
+out

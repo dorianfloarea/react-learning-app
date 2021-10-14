@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Content, Wrapper} from './MovieInfoBar.styles';
-import {calcTime, convertMoney} from '../../helpers';
+import {calcTime, convertMoney} from '../../helpers/misc';
 import PropTypes from 'prop-types';
 
 class MovieInfoBar extends Component {

@@ -1,21 +1,28 @@
 import React, {Component} from 'react';
-import RMDBLogo from '../../images/react-movie-logo.svg';
-import TMDBLogo from '../../images/tmdb_logo.svg';
+import RMDBLogo from '../../../public/images/react-movie-logo.svg';
+import TMDBLogo from '../../../public/images/tmdb_logo.svg';
 import {Content, LogoImg, TMDBLogoImg, Wrapper} from './Header.styles';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 
 class Header extends Component {
     render() {
         return (
             <Wrapper>
                 <Content>
-                    <Link to="/">
-                        <LogoImg src={RMDBLogo} alt="rmdb-logo"/>
+                    <Link href="/">
+                        <a>
+                            <LogoImg>
+                                <Image src={RMDBLogo} alt="rmdb-logo"/>
+                            </LogoImg>
+                        </a>
                     </Link>
-                    <TMDBLogoImg src={TMDBLogo} alt="tmdb-logo"/>
+                    <TMDBLogoImg>
+                        <Image src={TMDBLogo} alt="tmdb-logo"/>
+                    </TMDBLogoImg>
                 </Content>
             </Wrapper>
-        )
+        );
     }
 }
 

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Content, Text, Wrapper} from './MovieInfo.styles';
 import Thumb from '../common/Thumb';
 import {IMAGE_BASE_URL, POSTER_SIZE} from '../../config';
-import NoImage from '../../images/no_image.jpg';
+import NoImage from '../../../public/images/no_image.jpg';
 import PropTypes from 'prop-types';
 
 class MovieInfo extends Component {

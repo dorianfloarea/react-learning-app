@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import searchIcon from '../../images/search-icon.svg';
+import searchIcon from '../../../public/images/search-icon.svg';
 import {Content, Wrapper} from './SearchBar.styles';
 import PropTypes from 'prop-types';
 

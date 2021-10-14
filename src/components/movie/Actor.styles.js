@@ -10,12 +10,12 @@ export const Wrapper = styled.div`
     h3 {
         margin: 5px 0;
     }
-`;
-
-export const Image = styled.img`
-    display: block;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
+    
+    .actor {
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 `;

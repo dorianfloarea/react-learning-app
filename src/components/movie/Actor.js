@@ -1,29 +1,35 @@
 import React, {Component} from 'react';
-import {Image, Wrapper} from './Actor.styles';
+import {Wrapper} from './Actor.styles';
 import PropTypes from 'prop-types';
+import {IMAGE_BASE_URL, POSTER_SIZE} from '../../config';
+import NoImage from '../../../public/images/no_image.jpg';
+import Image from 'next/image';
 
 class Actor extends Component {
     render() {
         const {
                   name,
                   character,
-                  imageUrl
+                  profilePath
               } = this.props;
 
         return (
             <Wrapper>
-                <Image src={imageUrl} alt="actor-thumg"/>
+                {profilePath
+                    ? (<img className={'actor'} src={`${IMAGE_BASE_URL}${POSTER_SIZE}${profilePath}`} alt="actor-thumb"/>)
+                    : (<Image className={'actor'} src={NoImage} alt="actor-thumb"/>)
+                }
                 <h3>{name}</h3>
                 <p>{character}</p>
             </Wrapper>
-        )
+        );
     }
 }
 
 Actor.propTypes = {
-    name: PropTypes.string,
+    name     : PropTypes.string,
     character: PropTypes.string,
-    imageUrl: PropTypes.string
+    imageUrl : PropTypes.string
 };
 
 export default Actor;
