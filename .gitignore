@@ -27,5 +27,4 @@ yarn-error.log*
 .netlify
 .DS_Store
 .next
-.data
 out
